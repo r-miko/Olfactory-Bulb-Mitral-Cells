@@ -1,0 +1,6 @@
+- Loading MC cell works. However, what is Inic in the tuft? Does not load, had to change hoc file accordingly
+  Ok, Inic is a nicotinic channel. We do not need it here!
+
+- Maybe I want to convert both cells into Python classes at some point. See here:
+  andrewdavison.info/notes/hoc-to-python-bulbnet/
+
