@@ -8,7 +8,7 @@ from OBTestClass import OBTest
 
 # MODEL
 # Model parameters
-mc_pgc_excitation = False
+mc_pgc_excitation = True
 pgc_mc_inhibition = True
 celsius = 35
 AMPAgmax = 10.0*2e-3
@@ -37,8 +37,8 @@ model = OBTest(mc_pgc_excitation, pgc_mc_inhibition, celsius, AMPAgmax, AMPAalph
 # Stim parameters
 tstop = 6000
 time = range(0, tstop)
-hz = [1]#[1, 2, 5, 10, 20, 30, 40]
-c1 = [0.6]#[0.27, 0.315, 0.36, 0.405, 0.45, 0.495, 0.6]
+hz = [1.7]#[1, 2, 5, 10, 20, 30, 40]
+c1 = [0.3]#[0.27, 0.315, 0.36, 0.405, 0.45, 0.495, 0.6]
 c2 = 0.18
 factor = 0.2
 
