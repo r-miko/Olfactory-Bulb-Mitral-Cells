@@ -1,4 +1,4 @@
-# Prediction
+# Prediction and inverse prediction
 
 def predict(s,f):
 
