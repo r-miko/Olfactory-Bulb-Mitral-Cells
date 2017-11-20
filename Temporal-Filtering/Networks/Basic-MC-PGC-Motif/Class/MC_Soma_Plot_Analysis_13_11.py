@@ -30,7 +30,7 @@ for i in range(1):
 	ax.plot(x, latencies_20,'-*', label = "20Hz")
 	ax.plot(x, latencies_30, '-*', label = "30Hz")
 	ax.plot(x, latencies_40, '-*', label = "40Hz")
-	plt.xlim((0.2 ,0.65))
+	plt.xlim((0.265 ,0.605))
 
 	# Labels and Legend
 	plt.title("MC Soma Latencies", fontsize = 34)
@@ -42,8 +42,7 @@ for i in range(1):
 	ax.legend(loc = 'center left', bbox_to_anchor = (1, 0.5), fontsize = 28)
 
 	# Save
-	#plt.savefig("Figures/MC_Soma_latencies_circuit_"+str(i+1)+".eps",dpi=600)
-	#plt.savefig("Figures/MC_Soma_latencies_circuit_"+str(i+1)+".png",dpi=300) 
+	plt.savefig("Figures/MC_Soma_latencies_vs_strength_circuit_4.eps",dpi=600)
 
 
 # Show plots

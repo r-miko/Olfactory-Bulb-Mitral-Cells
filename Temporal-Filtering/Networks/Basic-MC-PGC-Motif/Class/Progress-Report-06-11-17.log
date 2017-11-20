@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.13)  17 NOV 2017 18:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.13)  20 NOV 2017 17:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -189,36 +189,56 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layoutvoffset=\dimen116
 \Gm@dimlist=\toks15
 )
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen117
+\lightrulewidth=\dimen118
+\cmidrulewidth=\dimen119
+\belowrulesep=\dimen120
+\belowbottomsep=\dimen121
+\aboverulesep=\dimen122
+\abovetopsep=\dimen123
+\cmidrulesep=\dimen124
+\cmidrulekern=\dimen125
+\defaultaddspace=\dimen126
+\@cmidla=\count102
+\@cmidlb=\count103
+\@aboverulesep=\dimen127
+\@belowrulesep=\dimen128
+\@thisruleclass=\count104
+\@lastruleclass=\count105
+\@thisrulewidth=\dimen129
+)
 (./Progress-Report-06-11-17.aux)
 \openout1 = `Progress-Report-06-11-17.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count102
-\scratchdimen=\dimen117
+\scratchcounter=\count106
+\scratchdimen=\dimen130
 \scratchbox=\box26
-\nofMPsegments=\count103
-\nofMParguments=\count104
+\nofMPsegments=\count107
+\nofMParguments=\count108
 \everyMPshowfont=\toks16
-\MPscratchCnt=\count105
-\MPscratchDim=\dimen118
-\MPnumerator=\count106
-\makeMPintoPDFobject=\count107
+\MPscratchCnt=\count109
+\MPscratchDim=\dimen131
+\MPnumerator=\count110
+\makeMPintoPDFobject=\count111
 \everyMPtoPDFconversion=\toks17
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -236,7 +256,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box27
-Package hyperref Info: Link coloring OFF on input line 16.
+Package hyperref Info: Link coloring OFF on input line 15.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -244,11 +264,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count108
+\c@section@level=\count112
 )
-LaTeX Info: Redefining \ref on input line 16.
-LaTeX Info: Redefining \pageref on input line 16.
-LaTeX Info: Redefining \nameref on input line 16.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
 
 (./Progress-Report-06-11-17.out) (./Progress-Report-06-11-17.out)
 \@outlinefile=\write3
@@ -290,121 +310,179 @@ LaTeX Info: Redefining \nameref on input line 16.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
-<images/2017-11-06/Circuit_4.pdf, id=4, 597.51233pt x 845.0471pt>
-File: images/2017-11-06/Circuit_4.pdf Graphic file (type pdf)
+<Figures/Circuit_4.pdf, id=4, 597.51233pt x 845.0471pt>
+File: Figures/Circuit_4.pdf Graphic file (type pdf)
 
-<use images/2017-11-06/Circuit_4.pdf>
-Package pdftex.def Info: images/2017-11-06/Circuit_4.pdf used on input line 30.
-
+<use Figures/Circuit_4.pdf>
+Package pdftex.def Info: Figures/Circuit_4.pdf used on input line 33.
 (pdftex.def)             Requested size: 298.75543pt x 223.35373pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/2017-11-06/Circui
-t_4.pdf>]
-<images/2017-11-06/MC_firing_rate_C4.pdf, id=21, 1806.75pt x 1806.75pt>
-File: images/2017-11-06/MC_firing_rate_C4.pdf Graphic file (type pdf)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Figures/Circuit_4.pdf>]
+<Figures/MC_firing_rate_C4.pdf, id=22, 1806.75pt x 1806.75pt>
+File: Figures/MC_firing_rate_C4.pdf Graphic file (type pdf)
 
-<use images/2017-11-06/MC_firing_rate_C4.pdf>
-Package pdftex.def Info: images/2017-11-06/MC_firing_rate_C4.pdf used on input 
-line 39.
+<use Figures/MC_firing_rate_C4.pdf>
+Package pdftex.def Info: Figures/MC_firing_rate_C4.pdf used on input line 43.
 (pdftex.def)             Requested size: 542.02919pt x 542.02919pt.
 
-Overfull \hbox (72.27417pt too wide) in paragraph at lines 39--40
+Overfull \hbox (72.27417pt too wide) in paragraph at lines 43--44
  [][] 
  []
 
-[2 <./images/2017-11-06/MC_firing_rate_C4.pdf>]
-<images/2017-11-06/MC_latencies_C4.pdf, id=66, 1806.75pt x 1806.75pt>
-File: images/2017-11-06/MC_latencies_C4.pdf Graphic file (type pdf)
+[2 <./Figures/MC_firing_rate_C4.pdf>]
+<Figures/MC_latencies_C4.pdf, id=68, 1806.75pt x 1806.75pt>
+File: Figures/MC_latencies_C4.pdf Graphic file (type pdf)
 
-<use images/2017-11-06/MC_latencies_C4.pdf>
-Package pdftex.def Info: images/2017-11-06/MC_latencies_C4.pdf used on input li
-ne 48.
+<use Figures/MC_latencies_C4.pdf>
+Package pdftex.def Info: Figures/MC_latencies_C4.pdf used on input line 53.
 (pdftex.def)             Requested size: 542.02919pt x 542.02919pt.
 
-Overfull \hbox (72.27417pt too wide) in paragraph at lines 48--49
+Overfull \hbox (72.27417pt too wide) in paragraph at lines 53--54
  [][] 
  []
 
-<images/2017-11-06/Circuit_1.pdf, id=67, 597.51233pt x 845.0471pt>
-File: images/2017-11-06/Circuit_1.pdf Graphic file (type pdf)
+<Figures/Circuit_1.pdf, id=70, 597.51233pt x 845.0471pt>
+File: Figures/Circuit_1.pdf Graphic file (type pdf)
 
-<use images/2017-11-06/Circuit_1.pdf>
-Package pdftex.def Info: images/2017-11-06/Circuit_1.pdf used on input line 59.
-
+<use Figures/Circuit_1.pdf>
+Package pdftex.def Info: Figures/Circuit_1.pdf used on input line 65.
 (pdftex.def)             Requested size: 298.75543pt x 223.35373pt.
- [3 <./images/2017-11-06/MC_latencies_C4.pdf>] <images/2017-11-06/Circuit_2.pdf
-, id=115, 597.51233pt x 845.0471pt>
-File: images/2017-11-06/Circuit_2.pdf Graphic file (type pdf)
+ [3 <./Figures/MC_latencies_C4.pdf>]
+<Figures/Circuit_2.pdf, id=118, 597.51233pt x 845.0471pt>
+File: Figures/Circuit_2.pdf Graphic file (type pdf)
 
-<use images/2017-11-06/Circuit_2.pdf>
-Package pdftex.def Info: images/2017-11-06/Circuit_2.pdf used on input line 65.
-
+<use Figures/Circuit_2.pdf>
+Package pdftex.def Info: Figures/Circuit_2.pdf used on input line 72.
 (pdftex.def)             Requested size: 298.75543pt x 251.80641pt.
- [4 <./images/2017-11-06/Circuit_1.pdf> <./images/2017-11-06/Circuit_2.pdf>]
-<images/2017-11-06/Circuit_3.pdf, id=132, 597.51233pt x 845.0471pt>
-File: images/2017-11-06/Circuit_3.pdf Graphic file (type pdf)
+ [4 <./Figures/Circuit_1.pdf> <./Figures/Circuit_2.pdf>] <Figures/Circuit_3.pdf
+, id=136, 597.51233pt x 845.0471pt>
+File: Figures/Circuit_3.pdf Graphic file (type pdf)
 
-<use images/2017-11-06/Circuit_3.pdf>
-Package pdftex.def Info: images/2017-11-06/Circuit_3.pdf used on input line 72.
-
+<use Figures/Circuit_3.pdf>
+Package pdftex.def Info: Figures/Circuit_3.pdf used on input line 80.
 (pdftex.def)             Requested size: 298.75543pt x 251.80641pt.
- [5 <./images/2017-11-06/Circuit_3.pdf>]
-<images/2017-11-06/MC_firing_rate.pdf, id=143, 1806.75pt x 1806.75pt>
-File: images/2017-11-06/MC_firing_rate.pdf Graphic file (type pdf)
+ [5 <./Figures/Circuit_3.pdf>]
+<Figures/MC_firing_rate.pdf, id=150, 1806.75pt x 1806.75pt>
+File: Figures/MC_firing_rate.pdf Graphic file (type pdf)
 
-<use images/2017-11-06/MC_firing_rate.pdf>
-Package pdftex.def Info: images/2017-11-06/MC_firing_rate.pdf used on input lin
-e 81.
+<use Figures/MC_firing_rate.pdf>
+Package pdftex.def Info: Figures/MC_firing_rate.pdf used on input line 90.
 (pdftex.def)             Requested size: 542.02919pt x 542.02919pt.
 
-Overfull \hbox (72.27417pt too wide) in paragraph at lines 81--82
+Overfull \hbox (72.27417pt too wide) in paragraph at lines 90--91
  [][] 
  []
 
-<images/2017-11-06/MC_latencies.pdf, id=144, 1806.75pt x 1806.75pt>
-File: images/2017-11-06/MC_latencies.pdf Graphic file (type pdf)
+<Figures/MC_latencies.pdf, id=151, 1806.75pt x 1806.75pt>
+File: Figures/MC_latencies.pdf Graphic file (type pdf)
 
-<use images/2017-11-06/MC_latencies.pdf>
-Package pdftex.def Info: images/2017-11-06/MC_latencies.pdf used on input line 
-87.
+<use Figures/MC_latencies.pdf>
+Package pdftex.def Info: Figures/MC_latencies.pdf used on input line 97.
 (pdftex.def)             Requested size: 542.02919pt x 542.02919pt.
 
-Overfull \hbox (72.27417pt too wide) in paragraph at lines 87--88
+Overfull \hbox (72.27417pt too wide) in paragraph at lines 97--98
  [][] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 91.
-[6 <./images/2017-11-06/MC_firing_rate.pdf>] [7 <./images/2017-11-06/MC_latenci
-es.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 91.
+[6 <./Figures/MC_firing_rate.pdf>]
+Package epstopdf Info: Source file: <Figures/MC_Soma_firing_rate_circuit_4.eps>
+
+(epstopdf)                    date: 2017-11-20 11:29:00
+(epstopdf)                    size: 36979 bytes
+(epstopdf)             Output file: <Figures/MC_Soma_firing_rate_circuit_4-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2017-11-20 15:30:56
+(epstopdf)                    size: 23054 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/MC_Soma_firing_rat
+e_circuit_4-eps-converted-to.pdf Figures/MC_Soma_firing_rate_circuit_4.eps>
+(epstopdf)             \includegraphics on input line 109.
+Package epstopdf Info: Output file is already uptodate.
+
+<Figures/MC_Soma_firing_rate_circuit_4-eps-converted-to.pdf, id=199, 2529.45pt 
+x 1806.75pt>
+File: Figures/MC_Soma_firing_rate_circuit_4-eps-converted-to.pdf Graphic file (
+type pdf)
+ <use Figures/MC_Soma_firing_rate_circuit_4-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/MC_Soma_firing_rate_circuit_4-eps-converted-to
+.pdf used on input line 109.
+(pdftex.def)             Requested size: 469.75502pt x 335.53925pt.
+
+[7 <./Figures/MC_latencies.pdf>]
+Package epstopdf Info: Source file: <Figures/MC_Soma_latencies_vs_strength_circ
+uit_4.eps>
+(epstopdf)                    date: 2017-11-20 15:35:29
+(epstopdf)                    size: 35714 bytes
+(epstopdf)             Output file: <Figures/MC_Soma_latencies_vs_strength_circ
+uit_4-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-20 15:35:46
+(epstopdf)                    size: 22064 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/MC_Soma_latencies_
+vs_strength_circuit_4-eps-converted-to.pdf Figures/MC_Soma_latencies_vs_strengt
+h_circuit_4.eps>
+(epstopdf)             \includegraphics on input line 118.
+Package epstopdf Info: Output file is already uptodate.
+
+<Figures/MC_Soma_latencies_vs_strength_circuit_4-eps-converted-to.pdf, id=251, 
+2529.45pt x 1806.75pt>
+File: Figures/MC_Soma_latencies_vs_strength_circuit_4-eps-converted-to.pdf Grap
+hic file (type pdf)
+
+<use Figures/MC_Soma_latencies_vs_strength_circuit_4-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/MC_Soma_latencies_vs_strength_circuit_4-eps-co
+nverted-to.pdf used on input line 118.
+(pdftex.def)             Requested size: 469.75502pt x 335.53925pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 127.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 127.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 127.
+
+[8 <./Figures/MC_Soma_firing_rate_circuit_4-eps-converted-to.pdf>]
+Overfull \hbox (30.6302pt too wide) in paragraph at lines 149--150
+\OT1/cmr/m/n/10.95 ues for strength [0.3,0.32,0.35,0.58,0.6] and the 5 dif-fer-
+ent val-ues for fre-quency [5.78,8.21,15.53,31.98,33.17].
+ []
+
+[9 <./Figures/MC_Soma_latencies_vs_strength_circuit_4-eps-converted-to.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 193.
+
+[10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
  (./Progress-Report-06-11-17.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 91.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 91.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
 Package rerunfilecheck Info: File `Progress-Report-06-11-17.out' has not change
 d.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 91.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
  ) 
 Here is how much of TeX's memory you used:
- 5561 strings out of 494910
- 83463 string characters out of 6179835
- 166149 words of memory out of 5000000
- 8812 multiletter control sequences out of 15000+600000
- 4844 words of font info for 18 fonts, out of 8000000 for 9000
+ 5682 strings out of 494910
+ 85043 string characters out of 6179835
+ 168722 words of memory out of 5000000
+ 8899 multiletter control sequences out of 15000+600000
+ 7591 words of font info for 27 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 29i,7n,29p,693b,346s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on Progress-Report-06-11-17.pdf (7 pages, 171598 bytes).
+ 29i,8n,29p,404b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb>
+Output written on Progress-Report-06-11-17.pdf (10 pages, 268295 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
- 19 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 391 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
+ 75 words of extra memory for PDF output out of 10000 (max. 10000000)
 

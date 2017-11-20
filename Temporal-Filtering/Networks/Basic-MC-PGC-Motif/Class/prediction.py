@@ -1,10 +1,14 @@
 # Prediction
 
-s  = 0.3 
-f  = 1.7
+def predict(s,f):
 
-fr = 32.26*s-0.59
-l  = -16*f+645.4
+	fr = 32.26*s-0.59
+	l  = -16*f+645.4
 
-print 'FR',fr
-print '\n Lat',l
+	return fr,l
+
+def inversePredict(fr,l):
+
+	f = -(l-645.4)/16.0
+	s = (fr+0.59)/32.26
+	return f,s
