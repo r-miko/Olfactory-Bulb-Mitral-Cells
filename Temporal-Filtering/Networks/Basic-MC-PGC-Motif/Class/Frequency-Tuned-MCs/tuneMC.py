@@ -17,7 +17,7 @@ def runBatch(ExFactor,InhFactor,PGFactor,frequencies):
 
 	# For each frequency, run function called from OBfunction
 	for frequency in frequencies:
-		print frequency
+		print 'f:', frequency, 'e:', ExFactor, 'i:', InhFactor, 'p:', PGFactor
 		filename = 'f' + str(frequency) + '_e' + str(ExFactor) + '_i' + str(InhFactor) + '_p' + str(PGFactor) + '_'
 		runOB(frequency,ExFactor,InhFactor,PGFactor,record_vars,syn_vars,directory,filename)
 
@@ -56,7 +56,7 @@ def plotTuningCurve(frequencies,tuning_curve):
 
 # Function that saves the plot
 def saveTuningCurve(figure):
-	print "Saving Plots"
+	print "Saving Plots..."
 	directory = "Tuning_Results/"
 	filename = 'e' + str(e) + '_i' + str(i) + '_p' + str(p)
 	
