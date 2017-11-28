@@ -24,13 +24,13 @@ def runBatch(ExFactor,InhFactor,PGFactor,frequencies):
 # Function that analyses the batch
 def analyseBatch(frequencies):
 	# Parameters
-	directory   = ''
+	directory   = 'npy_files/'
 	tuning_curve = np.zeros((len(frequencies),))
 	
 	# For each frequency create tuning curve from firing rate
 	for  j,frequency in enumerate(frequencies):
 		filename = 'f' + str(frequency) + '_e' + str(e) + '_i' + str(i) + '_p' + str(p) +'_' + 'MC_Spiketimes.npy'
-		spikes= np.load(filename)
+		spikes= np.load(directory+filename)
 		tuning_curve[j] = len(spikes)/3.0
 	return tuning_curve
 
@@ -41,7 +41,7 @@ def plotTuningCurve(frequencies,tuning_curve):
 	ax = fig.add_subplot(111)
 
 	# Plot frequency against the tuning_curve
-	ax.plot(frequencies,tuning_curve,'k*',markersize=5.0)
+	ax.plot(frequencies,tuning_curve,'b*',markersize=15.0)
 
 	# Labels and Legend
 	plt.title("MC Tuning", fontsize = 34)
