@@ -1,4 +1,4 @@
-# File which creates and runs a model from OBTestClass.py
+# Function which runs the model from the OBTestClass.py by calling runOB
 
 from neuron import h,gui
 import tabchannels
@@ -29,7 +29,7 @@ def runOB(frequency,ExFactor,InhFactor,PGFactor,record_vars,syn_vars,directory,f
 	GABAsigma = 2.0
 	GABArev = -80.0
 
-
+	# Circuit 4
 	mc_pgc_excitation = True 
 	pgc_mc_inhibition = True
 	pgc_stim = True
@@ -50,19 +50,21 @@ def runOB(frequency,ExFactor,InhFactor,PGFactor,record_vars,syn_vars,directory,f
 	input_current = np.ones((tstop,))*[np.cos((t/1000.0)*(2*np.pi*frequency)) for t in time]*c2 + strength
 	input_current[0:500] = 0.0
 	
+	# PGC stimulation
 	pgc_input_current = (np.ones((tstop,))*[np.cos((t/1000.0)*(2*np.pi*frequency)) for t in time]*c2 + strength)*PGFactor
 	pgc_input_current[0:500] = 0.0
 
 	# Record membrane potential and time
 	variables = model.record_membranept(record_vars)
 	variables = model.record_time(variables)
-		
+	
+	# Record synaptic current
 	synvariables = model.record_syn_currents(syn_vars)
 
 	# Run model
 	model.run(variables, tstop, input_current, pgc_input_current, pgc_stim)
 
-	# Calculate spike times, first spike latency and interspike frequency
+	# Calculate spike times
 	vec1 = variables[0]
 	l = np.array(vec1)
 	MC_spiketimes_list = model.mc_soma_spike_times(l, threshold = 0)
@@ -70,8 +72,8 @@ def runOB(frequency,ExFactor,InhFactor,PGFactor,record_vars,syn_vars,directory,f
 		MC_first_spike_latency = model.MC_first_spike_latency(MC_spiketimes_list, a = 500)
 		MC_interspike_freq = model.MC_spike_frequencies(MC_spiketimes_list)
 
-	# PLOTTING AND SAVING			
-	# Plotting membrane potential and input current
+	# PLOTTING AND SAVING
+	# Time vector
 	t_vec = variables[-1]
 	
 	# Plotting synaptic currents
@@ -85,7 +87,7 @@ def runOB(frequency,ExFactor,InhFactor,PGFactor,record_vars,syn_vars,directory,f
 		model.plotSynapticCurrent_pgAMPA(t_vec, synvariables[1], "Synaptic Current at pgAMPA", directory + filename +"SC_pgAMPA.png")
 		model.plotSynapticCurrent_pgNMDA(t_vec, synvariables[2], "Synaptic Current at pgNMDA", directory + filename +"SC_pgNMDA.png")
 
-	# Save
+	# Save the spiketimes
 	for i,x in enumerate(record_vars):
 		variable = variables[i]
 		np.save(directory +  filename +x, variable)
