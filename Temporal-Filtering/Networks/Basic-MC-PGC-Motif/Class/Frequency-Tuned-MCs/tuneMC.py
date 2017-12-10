@@ -67,9 +67,9 @@ def saveTuningCurve(figure):
 if __name__ == "__main__":
 	#Parameters
 	frequencies   = np.arange(1.0, 40.0, 1.0)
-	ExFactor  = [3.33, 6.66, 10.0]
-	InhFactor = [2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0]
-	PGFactor  = [0.2, 0.4, 0.6, 0.8, 1.0]
+	ExFactor  = [2, 4, 6, 8, 10]
+	InhFactor = [1.0, 2.0, 3.0, 4.0, 5.0]
+	PGFactor  = [0.2, 0.3, 0.4, 0.5, 0.6]
 
 	#For each combination of the above parameters, run the following functions
 	for e in ExFactor:
