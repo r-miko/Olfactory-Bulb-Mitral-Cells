@@ -64,13 +64,13 @@ def runOB(frequency,ExFactor,InhFactor,PGFactor,record_vars,syn_vars,directory,f
 	# Run model
 	model.run(variables, tstop, input_current, pgc_input_current, pgc_stim)
 
-	# Calculate spike times
+	# Calculate spike times and latency
 	vec1 = variables[0]
 	l = np.array(vec1)
 	MC_spiketimes_list = model.mc_soma_spike_times(l, threshold = 0)
 	if len(MC_spiketimes_list) > 0:
 		MC_first_spike_latency = model.MC_first_spike_latency(MC_spiketimes_list, a = 500)
-		MC_interspike_freq = model.MC_spike_frequencies(MC_spiketimes_list)
+		#MC_interspike_freq = model.MC_spike_frequencies(MC_spiketimes_list)
 
 	# PLOTTING AND SAVING
 	# Time vector
@@ -87,11 +87,14 @@ def runOB(frequency,ExFactor,InhFactor,PGFactor,record_vars,syn_vars,directory,f
 		model.plotSynapticCurrent_pgAMPA(t_vec, synvariables[1], "Synaptic Current at pgAMPA", directory + filename +"SC_pgAMPA.png")
 		model.plotSynapticCurrent_pgNMDA(t_vec, synvariables[2], "Synaptic Current at pgNMDA", directory + filename +"SC_pgNMDA.png")
 
-	# Save the spiketimes
+	# Save the spiketimes and latency
 	for i,x in enumerate(record_vars):
 		variable = variables[i]
 		np.save(directory +  filename +x, variable)
 	np.save(directory + filename + "MC_Spiketimes", MC_spiketimes_list)
+	#if len(MC_spiketimes_list) > 0:
+	np.save(directory + filename + "MC_First_spike_latency", MC_first_spike_latency)
+	#if len(MC_spiketimes_list) == 0:
+	#	np.save(directory + filename + "MC_First_spike_latency", 0)
 	plt.close("all")
-
 
