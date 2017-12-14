@@ -114,7 +114,7 @@ def plotPeaks2(peaks, X, Y):
 	plt.figure(figsize = (25,15))
 
 	# Plot
-	fig = plt.imshow(peaks, extent=(X.min(), X.max(), Y.max(), Y.min()), interpolation = 'bilinear',cmap = cm.coolwarm)
+	fig = plt.imshow(peaks, extent=(X.min(), X.max(), Y.max(), Y.min()), interpolation = 'bilinear', cmap = cm.coolwarm)
 
 	# Labels and Legend
 	plt.title("Peak Frequency of the Tuning Curve", fontsize = 34, y = 1.08)
@@ -125,6 +125,28 @@ def plotPeaks2(peaks, X, Y):
 	plt.colorbar(fig)
 
 	#plt.show()
+	return fig
+
+
+def plotPeaks3(peaks, X, Y, minvalue, maxvalue):
+	print minvalue,maxvalue
+	fig = plt.figure(figsize=(20, 20))
+	
+	#fig.title("Peak Frequency of the Tuning Curve", fontsize = 34, y = 1.08)
+	for i in range(len(peaks)):
+		ax = fig.add_subplot(3, 2, i+1)
+		im = ax.imshow(peaks[i], extent=(X.min(), X.max(), Y.max(), Y.min()), vmax=maxvalue, vmin=minvalue, interpolation = 'bilinear', cmap = cm.coolwarm)
+		ax.set_xlabel('Excitation Factor', fontsize = 12)
+		ax.set_ylabel('Inhibitory Factor', fontsize = 12)
+		ax.set_title('PG Factor ' + str(p), loc = 'left')
+	
+	# Figure title
+	fig.text(0.33, 0.95, 'Peak Frequency of the Tuning Curve', va = 'center', rotation = 'horizontal', fontsize = 30)
+
+	# Colour bar
+	cax = plt.axes([0.575, 0.1, 0.035, 0.23])
+	cbar = fig.colorbar(im, cax=cax)
+	
 	return fig
 
 # Function that saves the contour plot
@@ -161,13 +183,19 @@ if __name__ == "__main__":
 				#figL = plotTuningCurve(frequencies, TC[1], "Latency (ms)")
 				#saveTuningCurve(figL, "L")
 				FRpeaks[j,k,l] = extractPeak(TC[0])
+				#print FRpeaks[j,k,l]
 
 	# Plot peaks 
-	for m in range(len(PGFactor)):
-		fig = plotPeaks2(FRpeaks[:,:,m], np.array(ExFactor), np.array(InhFactor))
+	#for m in range(len(PGFactor)):
+	#	fig = plotPeaks2(FRpeaks[:,:,m], np.array(ExFactor), np.array(InhFactor))
+	peaks = [FRpeaks[:,:,0],FRpeaks[:,:,1],FRpeaks[:,:,2],FRpeaks[:,:,3],FRpeaks[:,:,4]]
+	minvalue = np.min(FRpeaks[:])
+	maxvalue = np.max(FRpeaks[:])
+	fig = plotPeaks3(peaks,np.array(ExFactor), np.array(InhFactor),minvalue,maxvalue)
+	plt.show()
 	# Save peak plots
-	for l,p in enumerate(PGFactor):
-		saveContourPlot(fig)
+	#for l,p in enumerate(PGFactor):
+	#	saveContourPlot(fig)
 		
 
 
