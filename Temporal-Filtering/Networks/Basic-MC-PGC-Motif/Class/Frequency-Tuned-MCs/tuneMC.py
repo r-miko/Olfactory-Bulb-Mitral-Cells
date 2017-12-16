@@ -95,10 +95,10 @@ def plotPeaks(peaks, X, Y, minvalue, maxvalue):
 		l.append([i,j])
 		ax = fig.add_subplot(3, 2, i+1)
 		im = ax.imshow(peaks[i], extent=(X.min(), X.max(), Y.max(), Y.min()), vmax=maxvalue, vmin=minvalue, interpolation = 'bilinear', cmap = cm.coolwarm)
-		ax.set_xlabel('Excitation Factor', fontsize = 12)
-		ax.set_ylabel('Inhibitory Factor', fontsize = 12)
-		ax.set_title('PG Factor ' + str(j), loc = 'left')
-	fig.text(0.33, 0.95, 'Peak Frequency of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 30)
+		ax.set_xlabel('Excitation Factor', fontsize = 20)
+		ax.set_ylabel('Inhibitory Factor', fontsize = 20)
+		ax.set_title('PG Factor ' + str(j), loc = 'left', fontsize = 20)
+	fig.text(0.33, 0.95, 'Peak Frequency of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 40)
 
 	# Colour bar
 	cax = plt.axes([0.575, 0.1, 0.035, 0.23])
