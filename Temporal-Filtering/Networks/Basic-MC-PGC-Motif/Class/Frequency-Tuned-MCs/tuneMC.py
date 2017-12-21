@@ -4,6 +4,7 @@
 from neuron import h,gui
 import tabchannels
 import matplotlib.pyplot as plt
+import matplotlib.ticker as plticker
 import numpy as np
 import os
 
@@ -94,15 +95,15 @@ def plotPeaks(peaks, X, Y, minvalue, maxvalue):
 	for i,j in zip(range(len(peaks)), PGFactor):
 		l.append([i,j])
 		ax = fig.add_subplot(3, 2, i+1)
-		im = ax.imshow(peaks[i], extent=(X.min(), X.max(), Y.max(), Y.min()), vmax=maxvalue, vmin=minvalue, interpolation = 'bilinear', cmap = cm.coolwarm)
+		im = ax.imshow(peaks[i], extent = (X.min(), X.max(), Y.max(), Y.min()), vmax = maxvalue, vmin = minvalue, interpolation = 'bilinear', cmap = cm.coolwarm, aspect = 1.5)
 		ax.set_xlabel('Excitation Factor', fontsize = 20)
 		ax.set_ylabel('Inhibitory Factor', fontsize = 20)
-		ax.set_title('PG Factor ' + str(j), loc = 'left', fontsize = 20)
+		ax.set_title('PG Input ' + str(j), loc = 'left', fontsize = 20)
 	fig.text(0.33, 0.95, 'Peak Frequency of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 40)
 
 	# Colour bar
 	cax = plt.axes([0.575, 0.1, 0.035, 0.23])
-	cbar = fig.colorbar(im, cax=cax)
+	cbar = fig.colorbar(im, cax = cax)
 	
 	return fig
 
@@ -115,13 +116,13 @@ if __name__ == "__main__":
 	PGFactor  = [0.2, 0.3, 0.4, 0.5, 0.6]
 
 	# Variables
-	FRpeaks = np.zeros((5,5,5))
+	FRpeaks = np.zeros((5, 5, 5))
 
 	# For each combination of the above parameters, run the following functions
 	for j,e in enumerate(ExFactor):
 		for k,i in enumerate(InhFactor):
 			for l,p in enumerate(PGFactor):
-				#runBatch(e,i,p,frequencies)
+				#runBatch(e, i, p, frequencies)
 				TC = analyseBatch(frequencies)
 				# Plot and save firing rates
 				#figFR = plotTuningCurve(frequencies, TC[0], "Firing Rate (Hz)")
@@ -130,14 +131,14 @@ if __name__ == "__main__":
 				#figL = plotTuningCurve(frequencies, TC[1], "Latency (ms)")
 				#saveTuningCurve(figL, "L")
 				# Peaks
-				FRpeaks[j,k,l] = extractPeak(TC[0])
+				FRpeaks[j, k, l] = extractPeak(TC[0])
 
 
 	# Plot peaks 
 	peaks = [FRpeaks[:,:,0], FRpeaks[:,:,1], FRpeaks[:,:,2], FRpeaks[:,:,3], FRpeaks[:,:,4]]
 	minvalue = np.min(FRpeaks[:])
 	maxvalue = np.max(FRpeaks[:])
-	fig = plotPeaks(peaks,np.array(ExFactor), np.array(InhFactor),minvalue,maxvalue)
+	fig = plotPeaks(peaks, np.array(ExFactor), np.array(InhFactor), minvalue, maxvalue)
 	#plt.show()
 
 	#Save contour plot
