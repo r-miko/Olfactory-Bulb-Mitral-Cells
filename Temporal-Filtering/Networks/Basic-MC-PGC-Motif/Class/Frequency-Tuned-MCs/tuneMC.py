@@ -4,7 +4,6 @@
 from neuron import h,gui
 import tabchannels
 import matplotlib.pyplot as plt
-import matplotlib.ticker as plticker
 import numpy as np
 import os
 
