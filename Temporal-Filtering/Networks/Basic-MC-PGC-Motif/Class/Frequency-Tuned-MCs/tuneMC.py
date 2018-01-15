@@ -1,5 +1,6 @@
 # File which tunes parameters for feed-forward inhibition
 # Returns the peak frequency of the tuning curves
+# Returns the resonance strength
 
 from neuron import h,gui
 import tabchannels
@@ -85,6 +86,16 @@ def extractPeak(tuning_curve):
 
 	return peak
 
+def extractPeakFR(tuning_curve):
+	peak = np.max(tuning_curve)
+
+	return peak
+
+def extractMean(tuning_curve):
+	mean = np.mean(tuning_curve)
+
+	return mean
+
 def plotPeaks(peaks, X, Y, minvalue, maxvalue):
 	# Variables
 	l = []
@@ -96,9 +107,10 @@ def plotPeaks(peaks, X, Y, minvalue, maxvalue):
 		ax = fig.add_subplot(3, 2, i+1)
 		im = ax.imshow(peaks[i], extent = (X.min(), X.max(), Y.max(), Y.min()), vmax = maxvalue, vmin = minvalue, interpolation = 'bilinear', cmap = cm.coolwarm, aspect = 1.5)
 		ax.set_xlabel('Excitation Factor', fontsize = 20)
-		ax.set_ylabel('Inhibitory Factor', fontsize = 20)
+		ax.set_ylabel('Inhibition Factor', fontsize = 20)
 		ax.set_title('PG Input ' + str(j), loc = 'left', fontsize = 20)
-	fig.text(0.33, 0.95, 'Peak Frequency of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 40)
+	#fig.text(0.25, 0.95, 'Peak Frequency of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 40)
+	fig.text(0.2, 0.95, 'Resonance Strength of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 40)
 
 	# Colour bar
 	cax = plt.axes([0.575, 0.1, 0.035, 0.23])
@@ -117,6 +129,8 @@ if __name__ == "__main__":
 	# Variables
 	FRpeaks = np.zeros((5, 5, 5))
 
+	FRtuningstrength = np.zeros((5, 5, 5))
+
 	# For each combination of the above parameters, run the following functions
 	for j,e in enumerate(ExFactor):
 		for k,i in enumerate(InhFactor):
@@ -130,19 +144,26 @@ if __name__ == "__main__":
 				#figL = plotTuningCurve(frequencies, TC[1], "Latency (ms)")
 				#saveTuningCurve(figL, "L")
 				# Peaks
-				FRpeaks[j, k, l] = extractPeak(TC[0])
-
+				#FRpeaks[j, k, l] = extractPeak(TC[0])
+				p  = extractPeakFR(TC[0])
+				mu = extractMean(TC[0])
+				FRtuningstrength[j, k, l] = (p - mu)/mu
 
 	# Plot peaks 
-	peaks = [FRpeaks[:,:,0], FRpeaks[:,:,1], FRpeaks[:,:,2], FRpeaks[:,:,3], FRpeaks[:,:,4]]
-	minvalue = np.min(FRpeaks[:])
-	maxvalue = np.max(FRpeaks[:])
+	#peaks = [FRpeaks[:, :, 0], FRpeaks[:, :, 1], FRpeaks[:, :, 2], FRpeaks[:, :, 3], FRpeaks[:, :, 4]]
+	#minvalue = np.min(FRpeaks[:])
+	#maxvalue = np.max(FRpeaks[:])
+	peaks = [FRtuningstrength[:, :, 0], FRtuningstrength[:, :, 1], FRtuningstrength[:, :, 2], FRtuningstrength[:, :, 3], FRtuningstrength[:, :, 4]]
+	minvalue = np.min(FRtuningstrength[:])
+	maxvalue = np.max(FRtuningstrength[:])
 	fig = plotPeaks(peaks, np.array(ExFactor), np.array(InhFactor), minvalue, maxvalue)
 	#plt.show()
 
 	#Save contour plot
 	print "Saving contour plots..."
-	filename = 'Contour_plot'
+	#filename = 'Contour_plot'
+	#filename = 'Contour_plot_tuning_frequency'
+	filename = 'Contour_plot_tuning_strength'
 	plt.savefig(filename + '.png')
 	#plt.close()
 		
