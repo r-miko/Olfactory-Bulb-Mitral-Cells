@@ -4,7 +4,7 @@ from neuron import h,gui
 import tabchannels
 import matplotlib.pyplot as plt
 import numpy as np
-from OBTestClass import OBTest
+from OBModelClass import OBModel
 
 # MODEL
 # Model parameters

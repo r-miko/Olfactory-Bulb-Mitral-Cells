@@ -1,10 +1,10 @@
-# Function which runs the model from the OBTestClass.py by calling runOB
+# Function which runs the model from the OBModelClass.py by calling runOB
 
 from neuron import h,gui
 import tabchannels
 import matplotlib.pyplot as plt
 import numpy as np
-from OBTestClass import OBTest
+from OBModelClass import OBModel
 
 # MODEL
 # Model parameters
@@ -43,7 +43,7 @@ def runOB(frequency,ExFactor,InhFactor,PGFactor,record_vars,syn_vars,directory,f
 
 
 	# Create model
-	model = OBTest(mc_pgc_excitation, pgc_mc_inhibition, celsius, AMPAgmax, AMPAalpha, AMPAbeta, AMPAact, AMPAsigma, AMPArev, NMDAgmax, NMDAalpha, NMDAbeta, NMDAact, NMDAsigma, NMDArev, GABAgmax, GABAalpha, GABAbeta, GABAact, GABAsigma, GABArev)
+	model = OBModel(mc_pgc_excitation, pgc_mc_inhibition, celsius, AMPAgmax, AMPAalpha, AMPAbeta, AMPAact, AMPAsigma, AMPArev, NMDAgmax, NMDAalpha, NMDAbeta, NMDAact, NMDAsigma, NMDArev, GABAgmax, GABAalpha, GABAbeta, GABAact, GABAsigma, GABArev)
 
 
 	# Input current

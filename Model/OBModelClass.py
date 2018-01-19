@@ -6,7 +6,7 @@ import tabchannels
 import matplotlib.pyplot as plt
 import numpy as np
 
-class OBTest(object):
+class OBModel(object):
 	def __init__(self, mc_pgc_excitation, pgc_mc_inhibition, celsius = 35, AMPAgmax = 1.0*2e-3, AMPAalpha = 1.0, AMPAbeta = 1.0/5.5, AMPAact = 0.0, AMPAsigma = 0.2, AMPArev = 0.0, NMDAgmax = 1.0*1e-3, NMDAalpha = 1.0/52.0, NMDAbeta = 1.0/343.0, NMDAact = 0.0, NMDAsigma = 0.2, NMDArev = 0.0, GABAgmax = 8.0*2e-3, GABAalpha = 1.0/1.25, GABAbeta = 1.0/18.0, GABAact = -40.0, GABAsigma = 2.0, GABArev = -80.0):
 		
 		# CELLS AND CONNECTIONS
