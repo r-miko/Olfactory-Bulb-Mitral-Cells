@@ -160,11 +160,12 @@ if __name__ == "__main__":
 	#plt.show()
 
 	#Save contour plot
+	results_directory = Tuning_Results/
 	print "Saving contour plots..."
 	#filename = 'Contour_plot'
 	#filename = 'Contour_plot_tuning_frequency'
 	filename = 'Contour_plot_tuning_strength'
-	plt.savefig(filename + '.png')
+	plt.savefig(results_directory + filename + '.png')
 	#plt.close()
 		
 
