@@ -1,4 +1,4 @@
-# File which tests the activation and inactivation for Icapn
+# File which tests the activation and inactivation for kAmt
 
 from neuron import h,gui
 import tabchannels
@@ -58,8 +58,8 @@ variables = []
 # Record membrane potential and time
 record_vars = ["pgc_gemmbody","pgc_soma"]
 variables = model.record_membranept(record_vars)
-variables = model.record_icapn_activation(variables)
-variables = model.record_icapn_inactivation(variables)
+variables = model.record_kamt_activation(variables)
+variables = model.record_kamt_inactivation(variables)
 variables = model.record_time(variables)
 
 # Run model
@@ -67,14 +67,13 @@ model.run(variables, tstop, input_current, pgc_input_current, pgc_stim)
 
 # PLOTTING AND SAVING		
 # Directory
-directory = "Activation_Tests/Icapn_Test/"
+directory = "Activation_Tests_Results/kAmt_Test/"
 parameters = "_40Hz_c0.27"
 		
 # Plotting
 t_vec = variables[-1]
 model.plotMemPotential_PGCgemmbody(t_vec, variables[0], "PG gemmbody membrane potential", directory + "V_gemmbody" + parameters + ".png")
 model.plotMemPotential_PGCgemmbody(t_vec, variables[1], "PG soma membrane potential", directory + "V_soma" + parameters + ".png")
-model.plotActivationVariableIcapn(t_vec, variables[2], "Activation of Icapn", directory + "Icapn_activation" + parameters + ".png")
-model.plotInactivationVariableIcapn(t_vec, variables[3], "Inactivation of Icapn", directory + "Icapn_inactivation" + parameters + ".png")
-
+model.plotActivationVariablekAmt(t_vec, variables[2], "Activation of kAmt", directory + "kAmt_activation" + parameters + ".png")
+model.plotInactivationVariablekAmt(t_vec, variables[3], "Inactivation of kAmt", directory + "kAmt_inactivation" + parameters + ".png")
 

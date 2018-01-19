@@ -1,4 +1,4 @@
-# File which tests the activation for KDRmt
+# File which tests the activation for kM
 
 from neuron import h,gui
 import tabchannels
@@ -58,7 +58,7 @@ variables = []
 # Record membrane potential and time
 record_vars = ["pgc_gemmbody","pgc_soma"]
 variables = model.record_membranept(record_vars)
-variables = model.record_kdrmt_activation(variables)
+variables = model.record_km_activation(variables)
 variables = model.record_time(variables)
 
 # Run model
@@ -66,12 +66,12 @@ model.run(variables, tstop, input_current, pgc_input_current, pgc_stim)
 
 # PLOTTING AND SAVING		
 # Directory
-directory = "Activation_Tests/KDRmt_Test/"
+directory = "Activation_Tests_Results/kM_Test/"
 parameters = "_40Hz_c0.27"
 		
 # Plotting
 t_vec = variables[-1]
 model.plotMemPotential_PGCgemmbody(t_vec, variables[0], "PG gemmbody membrane potential", directory + "V_gemmbody" + parameters + ".png")
 model.plotMemPotential_PGCgemmbody(t_vec, variables[1], "PG soma membrane potential", directory + "V_soma" + parameters + ".png")
-model.plotActivationVariableKDRmt(t_vec, variables[2], "Activation of KDRmt", directory + "KDRmt_activation" + parameters + ".png")
+model.plotActivationVariablekM(t_vec, variables[2], "Activation of kM", directory + "kM_activation" + parameters + ".png")
 

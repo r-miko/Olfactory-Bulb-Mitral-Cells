@@ -1,4 +1,4 @@
-# File which tests the activation for Ikca
+# File which tests the activation for KDRmt
 
 from neuron import h,gui
 import tabchannels
@@ -38,7 +38,7 @@ model = OBTest(mc_pgc_excitation, pgc_mc_inhibition, celsius, AMPAgmax, AMPAalph
 tstop = 6000
 time = range(0, tstop)
 hz = 40 #[1, 2, 5, 10, 20, 30, 40]
-c1 = 0.6 #[0.27, 0.315, 0.36, 0.405, 0.45, 0.495, 0.6]
+c1 = 0.27 #[0.27, 0.315, 0.36, 0.405, 0.45, 0.495, 0.6]
 c2 = 0.18
 factor = 0.2
 
@@ -58,7 +58,7 @@ variables = []
 # Record membrane potential and time
 record_vars = ["pgc_gemmbody","pgc_soma"]
 variables = model.record_membranept(record_vars)
-variables = model.record_ikca_activation(variables)
+variables = model.record_kdrmt_activation(variables)
 variables = model.record_time(variables)
 
 # Run model
@@ -66,13 +66,12 @@ model.run(variables, tstop, input_current, pgc_input_current, pgc_stim)
 
 # PLOTTING AND SAVING		
 # Directory
-directory = "Activation_Tests/Ikca_Test/"
-parameters = "_40Hz_c0.6"
+directory = "Activation_Tests_Results/KDRmt_Test/"
+parameters = "_40Hz_c0.27"
 		
 # Plotting
 t_vec = variables[-1]
 model.plotMemPotential_PGCgemmbody(t_vec, variables[0], "PG gemmbody membrane potential", directory + "V_gemmbody" + parameters + ".png")
 model.plotMemPotential_PGCgemmbody(t_vec, variables[1], "PG soma membrane potential", directory + "V_soma" + parameters + ".png")
-model.plotActivationVariableIkca(t_vec, variables[2], "Activation of Ikca", directory + "Ikca_activation" + parameters + ".png")
-
+model.plotActivationVariableKDRmt(t_vec, variables[2], "Activation of KDRmt", directory + "KDRmt_activation" + parameters + ".png")
 
