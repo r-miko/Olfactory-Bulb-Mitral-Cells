@@ -7,15 +7,16 @@ data_pgc = np.zeros((4, 2, 3, 3))
 data_mc = np.zeros((4, 2, 3, 3))
 strengths = [0.315, 0.54]
 frequencies = [2, 10, 40]
+directory = "Analysis-6-11-17/"
 
 # ANALYSIS
 for i in range(1, 5):
 	for l,j in enumerate(strengths):
 		for m,k in enumerate(frequencies):
 			suffix = "_circuit"+str(i)+"_c"+str(j)+"_hz"+str(k)
-			latency_pgc = np.load("PGC_First_spike_latency"+suffix+".npy")
-			spiketimes_pgc = np.load( "PGC_Spiketimes"+suffix+".npy")
-			intraburst_freq_pgc = np.load( "PGC_Interspike_frequencies"+suffix+".npy")
+			latency_pgc = np.load(directory + "PGC_First_spike_latency"+suffix+".npy")
+			spiketimes_pgc = np.load(directory + "PGC_Spiketimes"+suffix+".npy")
+			intraburst_freq_pgc = np.load(directory + "PGC_Interspike_frequencies"+suffix+".npy")
 
 
 			# Storing the latency
@@ -35,9 +36,9 @@ for i in range(1, 5):
 				data_pgc[i-1,l,m,2] = meanibfreq_pgc
 
 
-			latency_mc = np.load("MC_First_spike_latency"+suffix+".npy")
-			spiketimes_mc = np.load( "MC_Spiketimes"+suffix+".npy")
-			intraburst_freq_mc = np.load( "MC_Interspike_frequencies"+suffix+".npy")
+			latency_mc = np.load(directory + "MC_First_spike_latency"+suffix+".npy")
+			spiketimes_mc = np.load(directory + "MC_Spiketimes"+suffix+".npy")
+			intraburst_freq_mc = np.load(directory + "MC_Interspike_frequencies"+suffix+".npy")
 
 			# Storing the latency
 			data_mc[i-1,l,m,0] = latency_mc

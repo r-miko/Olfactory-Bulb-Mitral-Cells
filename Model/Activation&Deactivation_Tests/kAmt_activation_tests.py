@@ -4,7 +4,7 @@ from neuron import h,gui
 import tabchannels
 import matplotlib.pyplot as plt
 import numpy as np
-from OBTestClass import OBTest
+from OBModelClass import OBModel
 
 # MODEL
 # Model parameters
@@ -31,7 +31,7 @@ GABAsigma = 2.0
 GABArev = -80.0
 
 # Create model
-model = OBTest(mc_pgc_excitation, pgc_mc_inhibition, celsius, AMPAgmax, AMPAalpha, AMPAbeta, AMPAact, AMPAsigma, AMPArev, NMDAgmax, NMDAalpha, NMDAbeta, NMDAact, NMDAsigma, NMDArev, GABAgmax, GABAalpha, GABAbeta, GABAact, GABAsigma, GABArev)
+model = OBModel(mc_pgc_excitation, pgc_mc_inhibition, celsius, AMPAgmax, AMPAalpha, AMPAbeta, AMPAact, AMPAsigma, AMPArev, NMDAgmax, NMDAalpha, NMDAbeta, NMDAact, NMDAsigma, NMDArev, GABAgmax, GABAalpha, GABAbeta, GABAact, GABAsigma, GABArev)
 
 # STIMULATION
 # Stim parameters
