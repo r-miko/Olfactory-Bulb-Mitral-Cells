@@ -109,11 +109,13 @@ def plotPeaks(peaks, X, Y, minvalue, maxvalue):
 		ax.set_xlabel('Excitation Factor', fontsize = 23)
 		ax.set_ylabel('Inhibition Factor', fontsize = 23)
 		ax.set_title('PG Input ' + str(j), loc = 'left', fontsize = 23)
-	#fig.text(0.25, 0.95, 'Peak Frequency of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 45)
-	fig.text(0.2, 0.95, 'Resonance Strength of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 45)
+		ax.tick_params(labelsize = 18)
+	fig.text(0.25, 0.95, 'Peak Frequency of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 45)
+	#fig.text(0.2, 0.95, 'Resonance Strength of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 45)
 
 	# Colour bar
 	cax = plt.axes([0.575, 0.1, 0.035, 0.23])
+	cax.tick_params(labelsize = 18)
 	cbar = fig.colorbar(im, cax = cax)
 	
 	return fig
@@ -145,18 +147,18 @@ if __name__ == "__main__":
 				#saveTuningCurve(figL, "L")
 				# Peaks
 				
-				#FRpeaks[j, k, l] = extractPeak(TC[0])
+				FRpeaks[j, k, l] = extractPeak(TC[0])
 				p  = extractPeakFR(TC[0])
 				mu = extractMean(TC[0])
-				FRtuningstrength[j, k, l] = (p - mu)/mu
+				#FRtuningstrength[j, k, l] = (p - mu)/mu
 
 	# Plot peaks 
-	#peaks = [FRpeaks[:, :, 0], FRpeaks[:, :, 1], FRpeaks[:, :, 2], FRpeaks[:, :, 3], FRpeaks[:, :, 4]]
-	#minvalue = np.min(FRpeaks[:])
-	#maxvalue = np.max(FRpeaks[:])
-	peaks = [FRtuningstrength[:, :, 0], FRtuningstrength[:, :, 1], FRtuningstrength[:, :, 2], FRtuningstrength[:, :, 3], FRtuningstrength[:, :, 4]]
-	minvalue = np.min(FRtuningstrength[:])
-	maxvalue = np.max(FRtuningstrength[:])
+	peaks = [FRpeaks[:, :, 0], FRpeaks[:, :, 1], FRpeaks[:, :, 2], FRpeaks[:, :, 3], FRpeaks[:, :, 4]]
+	minvalue = np.min(FRpeaks[:])
+	maxvalue = np.max(FRpeaks[:])
+	#peaks = [FRtuningstrength[:, :, 0], FRtuningstrength[:, :, 1], FRtuningstrength[:, :, 2], FRtuningstrength[:, :, 3], FRtuningstrength[:, :, 4]]
+	#minvalue = np.min(FRtuningstrength[:])
+	#maxvalue = np.max(FRtuningstrength[:])
 	fig = plotPeaks(peaks, np.array(ExFactor), np.array(InhFactor), minvalue, maxvalue)
 	#plt.show()
 
@@ -164,8 +166,8 @@ if __name__ == "__main__":
 	results_directory = "Tuning_Results/"
 	print "Saving contour plots..."
 	#filename = 'Contour_plot'
-	#filename = 'Contour_plot_tuning_frequency'
-	filename = 'Contour_plot_tuning_strength'
+	filename = 'Contour_plot_tuning_frequency'
+	#filename = 'Contour_plot_tuning_strength'
 	plt.savefig(results_directory + filename + '.pdf')
 	#plt.close()
 		
