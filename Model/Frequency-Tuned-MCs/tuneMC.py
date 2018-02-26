@@ -105,12 +105,12 @@ def plotPeaks(peaks, X, Y, minvalue, maxvalue):
 	for i,j in zip(range(len(peaks)), PGFactor):
 		l.append([i,j])
 		ax = fig.add_subplot(3, 2, i+1)
-		im = ax.imshow(peaks[i], extent = (X.min(), X.max(), Y.max(), Y.min()), vmax = maxvalue, vmin = minvalue, interpolation = 'bilinear', cmap = cm.coolwarm, aspect = 1.5)
-		ax.set_xlabel('Excitation Factor', fontsize = 20)
-		ax.set_ylabel('Inhibition Factor', fontsize = 20)
-		ax.set_title('PG Input ' + str(j), loc = 'left', fontsize = 20)
-	#fig.text(0.25, 0.95, 'Peak Frequency of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 40)
-	fig.text(0.2, 0.95, 'Resonance Strength of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 40)
+		im = ax.imshow(peaks[i], extent = (X.min(), X.max(), Y.max(), Y.min()), vmax = maxvalue, vmin = minvalue, interpolation = 'bilinear', cmap = cm.coolwarm, aspect = 2.0)
+		ax.set_xlabel('Excitation Factor', fontsize = 23)
+		ax.set_ylabel('Inhibition Factor', fontsize = 23)
+		ax.set_title('PG Input ' + str(j), loc = 'left', fontsize = 23)
+	#fig.text(0.25, 0.95, 'Peak Frequency of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 45)
+	fig.text(0.2, 0.95, 'Resonance Strength of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 45)
 
 	# Colour bar
 	cax = plt.axes([0.575, 0.1, 0.035, 0.23])
@@ -144,6 +144,7 @@ if __name__ == "__main__":
 				#figL = plotTuningCurve(frequencies, TC[1], "Latency (ms)")
 				#saveTuningCurve(figL, "L")
 				# Peaks
+				
 				#FRpeaks[j, k, l] = extractPeak(TC[0])
 				p  = extractPeakFR(TC[0])
 				mu = extractMean(TC[0])
@@ -165,7 +166,7 @@ if __name__ == "__main__":
 	#filename = 'Contour_plot'
 	#filename = 'Contour_plot_tuning_frequency'
 	filename = 'Contour_plot_tuning_strength'
-	plt.savefig(results_directory + filename + '.png')
+	plt.savefig(results_directory + filename + '.pdf')
 	#plt.close()
 		
 
