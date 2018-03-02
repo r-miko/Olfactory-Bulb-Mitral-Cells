@@ -108,18 +108,18 @@ def plotPeaks(peaks, X, Y, minvalue, maxvalue):
 		im = ax.imshow(peaks[i], extent = (X.min(), X.max(), Y.max(), Y.min()), vmax = maxvalue, vmin = minvalue, interpolation = 'bilinear', cmap = cm.coolwarm, aspect = 2.0)
 		ax.set_xlabel('Excitation Factor', fontsize = 25)
 		ax.set_ylabel('Inhibition Factor', fontsize = 25)
-		ax.set_title('PG Input ' + str(j), loc = 'left', fontsize = 25)
+		ax.set_title('PG Input = ' + str(j), loc = 'left', fontsize = 25)
 		ax.tick_params(labelsize = 18)
 	fig.subplots_adjust(left = None, bottom = None, right = None, top = None, wspace = None, hspace = 0.3)
-	fig.text(0.25, 0.95, 'Peak Frequency of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 45)
+	fig.text(0.175, 0.95, 'Resonance Frequency of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 45)
 	#fig.text(0.2, 0.95, 'Resonance Strength of the Tuning Curves', va = 'center', rotation = 'horizontal', fontsize = 45)
 
 	# Colour bar
 	cax = plt.axes([0.575, 0.1, 0.035, 0.23])
 	cax.tick_params(labelsize = 18)
 	cbar = fig.colorbar(im, cax = cax)
-	cbar.ax.set_ylabel("Resonance Frequency (Hz)", fontsize = 25)
-	#cbar.ax.set_ylabel("Resonance Strength (nA)", fontsize = 25)
+	cbar.ax.set_ylabel("Resonance Frequency (Hz)", fontsize = 25, labelpad = 25)
+	#cbar.ax.set_ylabel("Resonance Strength", fontsize = 25, labelpad = 25)
 
 	return fig
 
@@ -171,7 +171,7 @@ if __name__ == "__main__":
 	#filename = 'Contour_plot'
 	filename = 'Contour_plot_tuning_frequency'
 	#filename = 'Contour_plot_tuning_strength'
-	plt.savefig(results_directory + filename + '.png')
+	plt.savefig(results_directory + filename + '.pdf')
 	#plt.close()
 		
 
