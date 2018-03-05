@@ -64,8 +64,8 @@ def plotTuningCurve(frequencies, tuning_curve, ylabel):
 	ax.title.set_position([0.5, 1.03])
 	plt.ylabel(ylabel, fontsize = 30)
 	plt.xlabel("Frequency (Hz)", fontsize = 30)
-	plt.xticks(fontsize = 23)
-	plt.yticks(fontsize = 23)
+	plt.xticks(fontsize = 30)
+	plt.yticks(fontsize = 30)
 	
 	#plt.show()
 	return fig
