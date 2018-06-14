@@ -22,49 +22,64 @@
     As some of this information may lie in the frequency content of the stimuli $[2]$, we studied input frequency dependent responses of mitral cells (MCs) in the olfactory bulb (OB), the first processing stage in the mammalian olfactory system.
     Specifically, we investigated whether MCs show frequency tuning and, if they do, how different components of the glomerular layer circuitry shape and determine the tuning.
   \end{block}
+  
+  
 
   \begin{columns}[t]
     \begin{column}{.48\linewidth}
-      \begin{block}{Method} 
+    
+      \begin{block}{Introduction} 
       	\begin{figure}
       		\center
       		\includegraphics[scale=0.6]{images/Circuit_Diagram}
       		\end{figure}
       		\begin{itemize}
-      			\item We used a model of the OB (modified from $[4]$) containing periglomerular cells (PGCs) and MCs.
-      			\item The cell models have compartments, ion channels and synaptic receptors.
-      			\item The synaptic conductances are modelled as double exponentials.
-      			\item Postsynaptic currents were modelled using the equation from $[5]$.
+      			\item We used a model of the OB (modified from $[4]$).
+      			\item Modeled MC - PGC (mitral cells - periglomerular cells), focusing on recurrent and feed - forward inhibition in the glomerular layer.
       		\end{itemize}
-      	      	
-      	
-      	
-      		
-      		
-      	Using these cell models, a model of the MC - PGC motif was created, thus focusing on the recurrent and feed-forward inhibition in the glomerular layer, see Figure 1. 
-      	The model records the membrane potential at the MC soma.
-      	Simple sinusoidal currents of varying frequencies were used as input to the model, using the equation:
-      	\begin{equation}
-      	y(t) = csin(2 \pi ft + \varphi) + 0.18. 
-      	\end{equation}
-      	The phase $(\varphi)$ was always $0$. The strength of the input to the MC $(c)$ was $0.45nA$ for all simulations (run in NEURON), which defined the amplitude of the current, see Figure 2. 
-      	
-		\begin{figure}
+      \end{block}
+      
+      \begin{block}{Method} 
+      	\begin{figure}
       		\center
       		\includegraphics[scale=1.2]{images/Figure2}
-      		\end{figure} 
+      	\end{figure}
+      	\begin{itemize}
+      		\item Used sinusoidal currents of varying frequencies as input, using the equation:
+      			\begin{equation}
+      				y(t) = csin(2 \pi ft + \varphi) + 0.18. 
+      			\end{equation}
+      		\item phase $(\varphi) = 0$ and strength of input to MC $(c) = 0.45nA$.
+      		\item PGC input strength was adjusted by multiplying $0.45nA$ by the values: $0.2, 0.3, 0.4, 0.5$ and $0.6$.
+      		\item MC - PGC excitation strength varied using $W_{exc}$ values: $2.0, 4.0, 6.0, 8.0$ and $10.0$.
+      		\item PGC - MC inhibition strength varied using $W_{inh}$ values: $1.0, 2.0, 3.0, 4.0$ and $5.0$.
+      		\item Frequency $(f)$ of input ranged between 1.0Hz and 40.0Hz (with step size 1.0).
+      		\item Parameter combinations: PGC input strength, MC - PGC excitation strength and PGC - MC inhibition strength.
+      	\end{itemize}
+      	\end{block}
       		
-      	The PGC input strength was adjusted by multiplying $0.45nA$ by the values: $0.2, 0.3, 0.4, 0.5$ and $0.6$. 
-      	The MC - PGC excitation strength varied using $W_{exc}$ values: $2.0, 4.0, 6.0, 8.0$ and $10.0$. 
-      	Finally, the PGC - MC inhibition strength varied using $W_{inh}$ values: $1.0, 2.0, 3.0, 4.0$ and $5.0$. 
-		The frequency $(f)$ of the input ranged between 
-		%\SI{1.0}{\hertz}
-		%$1.0\mathrm{~}Hz$
-		%\num{1.0}~Hz\\
-		1.0Hz
-		and $40.0Hz$ (with a step size of $1.0$). 
-		The output from the MC was recorded and from this the firing rates were calculated. 
-		For each parameter combination (PGC input strength, MC - PGC excitation strength, PGC - MC inhibition strength) we constructed frequency tuning curves by plotting firing rate against input frequency, see Figure 3. 
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      	\begin{block}{Method} 
+      	      	 we constructed frequency tuning curves by plotting firing rate against input frequency.
 		From these tuning curves we extracted the peakresonance frequency and the strength of the tuning $Q$, which was measured as:
 		\begin{equation}
 		Q = \frac{(F_{max} - F_{min})}{<F>}
