@@ -26,7 +26,7 @@ Specifically, we investigated whether MCs show frequency tuning and, if they do,
     
 \begin{columns}[t]
 \begin{column}{.48\linewidth}
-    
+
 \begin{block}{Model} 
 \begin{figure}
 \center
@@ -37,14 +37,11 @@ Specifically, we investigated whether MCs show frequency tuning and, if they do,
 \item Modeled MC - PGC, focusing on recurrent and feed - forward inhibition in the glomerular layer.
 \end{itemize}
 \end{block}
-
-\begin{block}{Method}
- 
+\begin{block}{Method} 
 \begin{figure}
 \center
 \includegraphics[scale=0.5]{images/Figure2AB}
 \end{figure}
-
 \begin{itemize}
 \item Used sinusoidal currents of varying frequencies as input, using the equation:
 \begin{equation}
@@ -57,12 +54,10 @@ y(t) = csin(2 \pi ft + \varphi) + 0.18.
 \item Frequency $(f)$ of input ranged between 1.0Hz and 40.0Hz (with step size 1.0).
 \item Parameter combinations: PGC input strength, MC - PGC excitation strength and PGC - MC inhibition strength.
 \end{itemize}
-
 \begin{figure}
 \center
 \includegraphics[scale=0.3]{images/Figure2C}
 \end{figure}
-
 \begin{itemize}
 \item constructed frequency tuning curves
 \item extracted the peakresonance frequency and the strength of the tuning $Q$, measured as:
@@ -72,40 +67,33 @@ Q = \frac{(F_{max} - F_{min})}{<F>}
 \item $F_{max}$ and $F_{min}$ is the maximum and minimum firing rate.
 \item $<F>$ is the mean firing rate over all measured frequencies.
 \end{itemize}
-      	
 \end{block}
 
 \end{column}
+\begin{column}{.48\linewidth}
 
+\begin{block}{Results}
+\begin{figure}
+\center
+\includegraphics[scale=0.5]{images/Contour_plot_tuning_frequency}
+\end{figure} 
+We found that the resonance frequency decreased as the excitation of the PGC (both from the input and from the MC) increased, whereas the strength of the PGC inhibition onto the MC did not seem to have a strong effect. 
+Furthermore, the resonance strength increased with the strength of the excitatory connection between the MC and the PGC when the PGC received sufficient external input from olfactory stimuli.
+\end{block}
 
+\begin{block}{Discussion}
+\begin{figure}
+\center
+\includegraphics[scale=0.5]{images/Contour_plot_tuning_strength}
+\end{figure} 
+These results suggest that the MC can indeed show frequency tuning and that this depends on the strength of the excitatory synaptic input to the PGC, which provide inhibitory input to the MC.
+However, the observed frequency tuning occurred in a narrow range ($19.5Hz – 33.0Hz$).
+Future work should investigate how the OB could use this frequency tuning to obtain information about the surrounding olfactory scene.
+\end{block}
 
-
-    \begin{column}{.48\linewidth}
-      \begin{block}{Results}
-      	\begin{figure}
-      		\center
-      		\includegraphics[scale=0.5]{images/Contour_plot_tuning_frequency}
-      		\end{figure} 
-        We found that the resonance frequency decreased as the excitation of the PGC (both from the input and from the MC) increased, whereas the strength of the PGC inhibition onto the MC did not seem to have a strong effect. 
-        Furthermore, the resonance strength increased with the strength of the excitatory connection between the MC and the PGC when the PGC received sufficient external input from olfactory stimuli.
-      \end{block}
-
-      \begin{block}{Discussion}
-      	\begin{figure}
-      		\center
-      		\includegraphics[scale=0.5]{images/Contour_plot_tuning_strength}
-      		\end{figure} 
-        These results suggest that the MC can indeed show frequency tuning and that this depends on the strength of the excitatory synaptic input to the PGC, which provide inhibitory input to the MC.
-        However, the observed frequency tuning occurred in a narrow range ($19.5Hz – 33.0Hz$).
-        Future work should investigate how the OB could use this frequency tuning to obtain information about the surrounding olfactory scene.
-      \end{block}
-    \end{column}
-  \end{columns}
+\end{column}
+\end{columns}
 \end{frame}
 \end{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-engine: xetex
-%%% End:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
