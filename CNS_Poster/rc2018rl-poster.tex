@@ -6,7 +6,7 @@
 \usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
 \usepackage{siunitx}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 5
-\title{Influence of inhibitory circuits in the olfactory bulb on the frequency tuning of mitral cells}
+\title{Influence of inhibitory circuits on the frequency tuning of mitral cells}
 \author[Miko]{Rebecca Miko, Christoph Metzner and Volker Steuber}
 \institute{University of Hertfordshire, AL10 9AB, UK}
 \date{Jul. 31th, 2018}
@@ -15,32 +15,32 @@
 \begin{document}
 \begin{frame}{} 
 \begin{block}{Motivation}
-The olfactory bulb (OB) in mammals is responsible for receiving, processing and relaying olfactory information (odours). 
+The olfactory bulb (OB) is responsible for receiving, processing and relaying olfactory information (odours). 
 Naturalistic odour stimuli have a rich temporal structure, caused by turbulent airflow.
-Recent studies show that this structure contains information about the olfactory scene, for example the distance to an odour source $[1,2]$. 
-Furthermore, it has been suggested that animals might exploit this structure and extract this information in order to find odour sources $[3]$. 
-As some of this information may lie in the frequency content of the stimuli $[2]$, we studied input frequency dependent responses of mitral cells (MCs) in the olfactory bulb (OB).
-Specifically, we investigated whether MCs show frequency tuning and, if they do, how different components of the glomerular layer circuitry shape and determine the tuning.
+Recent studies show that this structure contains information about the olfactory scene [1,2]. 
+It has been suggested that animals might exploit this structure and extract information [3]. 
+Some of this information may lie in the frequency content of the stimuli [2], therefore we studied input frequency dependent responses of mitral cells (MCs) in the OB.
+Specifically, we investigated whether MCs show frequency tuning and, if they do, how different components of the glomerular layer circuitry  shape and determine the tuning.
 \end{block}    
-    
+
 \begin{columns}[t]
 \begin{column}{.48\linewidth}
 
 \begin{block}{Model} 
 \begin{figure}
 \center
-\includegraphics[scale=0.6]{images/Circuit_Diagram}
+\includegraphics[scale=0.5]{images/Circuit_Diagram}
 \end{figure}
 \begin{itemize}
 \item Used a model of the OB (modified from $[4]$).
-\item Modeled MC - PGC, focusing on recurrent and feed - forward inhibition in the glomerular layer.
+\item Modeled MC - PGC (periglomerular cells), focusing on recurrent and feed - forward inhibition in the glomerular layer.
 \end{itemize}
 \end{block}
 
 \begin{block}{Method} 
 \begin{figure}
 \center
-\includegraphics[scale=1.2]{images/Figure2}
+\includegraphics[scale=0.9]{images/Figure2}
 \end{figure}
 \begin{itemize}
 \item Used sinusoidal currents of varying frequencies as input, using the equation:
@@ -53,41 +53,52 @@ y(t) = csin(2 \pi ft + \varphi) + 0.18.
 \item PGC - MC inhibition strength varied using $W_{inh}$ values: $1.0, 2.0, 3.0, 4.0$ and $5.0$.
 \item Frequency $(f)$ of input ranged between 1.0Hz and 40.0Hz (with step size 1.0).
 \item Parameter combinations: PGC input strength, MC - PGC excitation strength and PGC - MC inhibition strength.
-\item Constructed frequency tuning curves
+\item Constructed frequency tuning curves.
 \end{itemize}
+\end{block}
+
+\begin{block}{References} 
+\tiny{[1] Celani, A., Villermaux, E. and Vergassola, M.: Odor landscapes in turbulent environments. Physical Review X, 4(4), p.041015, 2014.}
+
+\tiny{[2] Schmuker, M., Bahr, V. and Huerta, R.: Exploiting plume structure to decode gas source distance using metal-oxide gas sensors. Sensors and Actuators B: Chemical, 235, pp.636-646, 2016.}
+
+\tiny{[3] Jacob, V., Monsempès, C., Rospars, J.P., Masson, J.B. and Lucas, P.: Olfactory coding in the turbulent realm. PLoS Computational Biology, 13(12), p.e1005870, 2017.}
+
+\tiny{[4] Li, G. and Cleland, T.A.: A two-layer biophysical model of cholinergic neuromodulation in olfactory bulb. Journal of Neuroscience, 33(7), pp.3037-3058, 2013.}
+
+\tiny{[5] Brea, J.N., Kay, L.M. and Kopell, N.J.: Biophysical model for gamma rhythms in the olfactory bulb via subthreshold oscillations. Proceedings of the National Academy of Sciences, 106(51), pp 21954-21959, 2009.}
 \end{block}
 
 \end{column}
 \begin{column}{.48\linewidth}
 
 \begin{block}{Results}
+\begin{itemize}
+\item Extracted the peak resonance frequency (RF).
 \begin{figure}
 \center
-\includegraphics[scale=0.5]{images/Contour_plot_tuning_frequency}
-\end{figure} 
-\begin{itemize}
-\item Resonance frequency decreased as the excitation of the PGC increased (both from input and the MC).
-\item Strength of PGC inhibition onto the MC did not have a strong effect.
-\item Resonance strength increased with the strength of the excitatory connection, when the PGC received sufficient external input from olfactory stimuli.
-\end{itemize}
-\end{block}
-
-\begin{block}{Discussion}
-\begin{itemize}
-\item Extracted the peak resonance frequency and the strength of the tuning $Q$, measured as:
+\includegraphics[scale=0.55]{images/Contour_plot_tuning_frequency}
+\end{figure}
+\item Extracted the resonance strength (RS) of the tuning $Q$, measured as:
 \begin{equation}
 Q = \frac{(F_{max} - F_{min})}{<F>}
 \end{equation}
 \item $F_{max}$ and $F_{min}$ is maximum and minimum firing rate.
 \item $<F>$ is mean firing rate over all measured frequencies.
-\end{itemize}
 \begin{figure}
 \center
-\includegraphics[scale=0.5]{images/Contour_plot_tuning_strength}
+\includegraphics[scale=0.55]{images/Contour_plot_tuning_strength}
 \end{figure} 
+\item RF decreased as the excitation of the PGC increased (both from input and the MC).
+\item Strength of PGC inhibition onto the MC did not have a strong effect.
+\end{itemize}
+\end{block}
+
+\begin{block}{Discussion}
 \begin{itemize}
-\item Results suggest that the MC can indeed show frequency tuning.
-\item this depends on the strength of the excitatory synaptic input to the PGC, which provide inhibitory input to the MC.
+\item RS increased with the strength of the excitatory connection, when the PGC received sufficient external input.
+\item Suggest the MC can show frequency tuning.
+\item Depends on the strength of the excitatory synaptic input to the PGC, which provides inhibitory input to the MC.
 \end{itemize}
 \end{block}
 
