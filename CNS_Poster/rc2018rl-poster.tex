@@ -17,9 +17,9 @@
 \begin{block}{Motivation}
 The olfactory bulb (OB) is responsible for receiving, processing and relaying olfactory information (odours). 
 Naturalistic odour stimuli have a rich temporal structure, caused by turbulent airflow.
-Recent studies show that this structure contains information about the olfactory scene [1,2]. 
-It has been suggested that animals might exploit this structure and extract information [3]. 
-Some of this information may lie in the frequency content of the stimuli [2], therefore we studied input frequency dependent responses of mitral cells (MCs) in the OB.
+Recent studies show that this structure contains information about the olfactory scene. 
+It has been suggested that animals might exploit this structure and extract information. 
+Some of this information may lie in the frequency content of the stimuli, therefore we studied input frequency dependent responses of mitral cells (MCs) in the OB.
 Specifically, we investigated whether MCs show frequency tuning and, if they do, how different components of the glomerular layer circuitry  shape and determine the tuning.
 \end{block}    
 
@@ -29,10 +29,10 @@ Specifically, we investigated whether MCs show frequency tuning and, if they do,
 \begin{block}{Model} 
 \begin{figure}
 \center
-\includegraphics[scale=0.5]{images/Circuit_Diagram}
+\includegraphics[scale=0.6]{images/Circuit_Diagram}
 \end{figure}
 \begin{itemize}
-\item Used a model of the OB (modified from $[4]$).
+\item Used a model of the OB (modified from Celani et al. (2014)).
 \item Modeled MC - PGC (periglomerular cells), focusing on recurrent and feed - forward inhibition in the glomerular layer.
 \end{itemize}
 \end{block}
@@ -40,21 +40,25 @@ Specifically, we investigated whether MCs show frequency tuning and, if they do,
 \begin{block}{Method} 
 \begin{figure}
 \center
-\includegraphics[scale=0.9]{images/Figure2}
+\includegraphics[scale=0.7]{images/Figure2AB}
 \end{figure}
 \begin{itemize}
 \item Used sinusoidal currents of varying frequencies as input, using the equation:
 \begin{equation}
 y(t) = csin(2 \pi ft + \varphi) + 0.18. 
 \end{equation}
-\item Phase $(\varphi) = 0$ and strength of input to MC $(c) = 0.45nA$.
-\item PGC input strength was adjusted by multiplying $0.45nA$ by the values: $0.2, 0.3, 0.4, 0.5$ and $0.6$.
-\item MC - PGC excitation strength varied using $W_{exc}$ values: $2.0, 4.0, 6.0, 8.0$ and $10.0$.
-\item PGC - MC inhibition strength varied using $W_{inh}$ values: $1.0, 2.0, 3.0, 4.0$ and $5.0$.
-\item Frequency $(f)$ of input ranged between 1.0Hz and 40.0Hz (with step size 1.0).
+\item Phase $(\varphi) = 0$ and strength of input to MC (c) = 0.45nA.
+\item PGC input strength was adjusted by multiplying 0.45nA by the values: 0.2, 0.3, 0.4, 0.5 and 0.6.
+\item MC - PGC excitation strength varied using $W_{exc}$ values: 2.0, 4.0, 6.0, 8.0 and 10.0.
+\item PGC - MC inhibition strength varied using $W_{inh}$ values: 1.0, 2.0, 3.0, 4.0 and 5.0.
+\item Frequency (f) of input ranged between 1.0Hz and 40.0Hz (with step size 1.0).
 \item Parameter combinations: PGC input strength, MC - PGC excitation strength and PGC - MC inhibition strength.
-\item Constructed frequency tuning curves.
+\item Constructed frequency tuning curves, for example:
 \end{itemize}
+\begin{figure}
+\center
+\includegraphics[scale=0.5]{images/Figure2C}
+\end{figure}
 \end{block}
 
 \end{column}
@@ -62,31 +66,31 @@ y(t) = csin(2 \pi ft + \varphi) + 0.18.
 
 \begin{block}{Results}
 \begin{itemize}
-\item Extracted the peak resonance frequency (RF).
+\item Extracted the peak resonance frequency.
 \begin{figure}
 \center
 \includegraphics[scale=0.55]{images/Contour_plot_tuning_frequency}
 \end{figure}
-\item Extracted the resonance strength (RS) of the tuning $Q$, measured as:
+\item Extracted the resonance strength of the tuning Q, measured as:
 \begin{equation}
 Q = \frac{(F_{max} - F_{min})}{<F>}
 \end{equation}
 \item $F_{max}$ and $F_{min}$ is maximum and minimum firing rate.
 \item $<F>$ is mean firing rate over all measured frequencies.
+\end{itemize}
 \begin{figure}
 \center
 \includegraphics[scale=0.55]{images/Contour_plot_tuning_strength}
 \end{figure} 
-\item RF decreased as the excitation of the PGC increased (both from input and the MC).
-\item Strength of PGC inhibition onto the MC did not have a strong effect.
-\end{itemize}
 \end{block}
 
 \begin{block}{Discussion}
 \begin{itemize}
-\item RS increased with the strength of the excitatory connection, when the PGC received sufficient external input.
-\item Suggest the MC can show frequency tuning.
-\item Depends on the strength of the excitatory synaptic input to the PGC, which provides inhibitory input to the MC.
+\item Resonance frequency decreased as the excitation of the PGC increased (both from input and the MC).
+\item Strength of PGC inhibition onto the MC did not have a strong effect.
+\item Resonance strength increased with the strength of the excitatory connection, when the PGC received sufficient external input.
+\item Results suggest the MC can show frequency tuning.
+\item This depends on the strength of the excitatory synaptic input to the PGC, which provides inhibitory input to the MC.
 \end{itemize}
 \end{block}
 
