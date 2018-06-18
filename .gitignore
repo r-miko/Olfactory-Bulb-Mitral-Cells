@@ -1,6 +1,6 @@
 #All imported images
-/Doc_Figures/
-/images/
+/doc_figures/
+/poster_images/
 
 #Latex files
 *.sty
