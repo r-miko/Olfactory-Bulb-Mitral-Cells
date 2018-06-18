@@ -1,0 +1,11 @@
+#All imported images
+Doc_Figures/
+CNS_Poster/images/
+
+#Latex files
+*.sty
+*.sh
+*.nav
+*.snm
+*.toc
+*.sty
