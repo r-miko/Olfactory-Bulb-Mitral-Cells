@@ -1,1 +1,0 @@
-../GradeAMPA.mod
