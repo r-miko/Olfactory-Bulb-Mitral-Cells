@@ -39,9 +39,7 @@ GABArev = -80.0
 pgc = h.PGcell()
 mc  = h.Mitral()
 
-
 # connect MC and PGC cells 
-
 # AMPA MC -> PGC
 pgAMPA = h.gradAMPA(pgc.gemmbody(0.5))
 h.setpointer(mc.tuft(.5)._ref_v,'vpre',pgAMPA)
@@ -72,9 +70,7 @@ mcGABA.thetasyn = GABAact
 mcGABA.sigma = GABAsigma
 mcGABA.e = GABArev
 
-
 # Variable input current
-
 stim = h.IClamp(mc.tuft(0.5))
 stim.delay = 0
 stim.dur = 1e9
@@ -85,7 +81,6 @@ time = range(0,tstop)
 input_current = np.ones((tstop,))*[np.cos((t/1000.0)*(2*np.pi*hz)) for t in time]*c + c
 input_current[0:1000] = 0.0
 
-
 tvec = h.Vector(tstop)
 r=h.Vector(tstop)
 for i in range(0,tstop):
@@ -94,10 +89,6 @@ for i in range(0,tstop):
 
 #r[tstop-1]=0.0
 r.play(stim._ref_amp,tvec,1,sec=mc.tuft)
-
-
-
-
 
 # Set up recording variables
 vsoma_vec = h.Vector() # Membrane potential vector (at the MC soma)
@@ -116,7 +107,6 @@ t_vec.record(h._ref_t)
 # Run the simulation
 h.tstop = tstop
 h.run()
-
 
 # plot the membrane potential
 plt.figure(figsize=(8,4))
@@ -145,7 +135,6 @@ plt.figure(figsize=(8,4))
 plt.plot(t_vec,vgemmbody_vec,'k')
 plt.xlabel('time (ms)')
 plt.ylabel('membrane potential at PGC gemmbody (mV)')
-
 
 plt.show()
 

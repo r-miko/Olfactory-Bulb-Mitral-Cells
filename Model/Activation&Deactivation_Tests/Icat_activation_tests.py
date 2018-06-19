@@ -37,11 +37,11 @@ model = OBModel(mc_pgc_excitation, pgc_mc_inhibition, celsius, AMPAgmax, AMPAalp
 # Stim parameters
 tstop = 6000
 time = range(0, tstop)
-hz = 5 #[1, 2, 5, 10, 20, 30, 40]
-c1 = 0.6 #[0.27, 0.315, 0.36, 0.405, 0.45, 0.495, 0.6]
-c2 = 0.18
-factor = 0.2
 
+hz = 40 #[1, 2, 5, 10, 20, 30, 40] #frequency
+c1 = 0.6 #[0.27, 0.315, 0.36, 0.405, 0.45, 0.495, 0.6] #strength
+c2 = 0.18 #sets the threshold for firing at 0.18nA for the mitral cells
+factor = 0.2 #PG cell input current scaled down to compensate for much higher input resistance
 
 # Input current
 input_current = np.ones((tstop,))*[np.cos((t/1000.0)*(2*np.pi*hz)) for t in time]*c2 + c1
@@ -80,19 +80,5 @@ model.plotActivationVariableIcat(t_vec, variables[2], "Activation of Icat", dire
 model.plotActivationVariableIcat(t_vec, variables[2], "Activation of Icat", directory + "Icat_activation" + parameters + ".eps")
 model.plotInactivationVariableIcat(t_vec, variables[3], "Inactivation of Icat", directory + "Icat_inactivation" + parameters + ".png")
 model.plotInactivationVariableIcat(t_vec, variables[3], "Inactivation of Icat", directory + "Icat_inactivation" + parameters + ".eps")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

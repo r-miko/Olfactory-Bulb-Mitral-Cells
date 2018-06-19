@@ -37,10 +37,11 @@ model = OBTest(mc_pgc_excitation, pgc_mc_inhibition, celsius, AMPAgmax, AMPAalph
 # Stim parameters
 tstop = 6000
 time = range(0, tstop)
-hz = [1.7]#[1, 2, 5, 10, 20, 30, 40]
-c1 = [0.3]#[0.27, 0.315, 0.36, 0.405, 0.45, 0.495, 0.6]
-c2 = 0.18
-factor = 0.2
+
+hz = [1, 2, 5, 10, 20, 30, 40] #frequency
+c1 = [0.27, 0.315, 0.36, 0.405, 0.45, 0.495, 0.6] #strength
+c2 = 0.18 #sets the threshold for firing at 0.18nA for the mitral cells
+factor = 0.2 #PG cell input current scaled down to compensate for much higher input resistance
 
 for h in hz:
 	for c in c1:

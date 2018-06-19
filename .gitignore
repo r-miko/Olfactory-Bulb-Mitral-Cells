@@ -2,6 +2,9 @@
 /doc_figures/
 /poster_images/
 
+#Predictions
+/Model/Predictions
+
 #Latex files
 *.sty
 *.sh

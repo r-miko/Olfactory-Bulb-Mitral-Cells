@@ -39,7 +39,7 @@ def runOB(frequency,ExFactor,InhFactor,PGFactor,record_vars,syn_vars,directory,f
 	tstop = 3000
 	time = range(0, tstop)
 	strength = 0.45
-	c2 = 0.18
+	c2 = 0.18 #sets the threshold for firing at 0.18nA for the mitral cells
 
 
 	# Create model
@@ -97,4 +97,6 @@ def runOB(frequency,ExFactor,InhFactor,PGFactor,record_vars,syn_vars,directory,f
 	#if len(MC_spiketimes_list) == 0:
 	#	np.save(directory + filename + "MC_First_spike_latency", 0)
 	plt.close("all")
+
+
 
