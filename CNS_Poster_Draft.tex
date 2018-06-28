@@ -6,6 +6,7 @@
 \usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
 \usepackage{siunitx}
 \usepackage{multirow}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 5
 \title{Influence of inhibitory circuits on the frequency tuning of mitral cells}
 \author[Miko]{Rebecca Miko, Christoph Metzner and Volker Steuber}
@@ -74,46 +75,50 @@ Specifically, we investigated whether MCs show frequency tuning and, if they do,
 
 \begin{itemize}
 \item Parameter combinations: PGC input strength, MC - PGC excitation strength and PGC - MC inhibition strength.
-\item Constructed frequency tuning curves, for example:
-\end{itemize}
-
-\begin{figure}
-\center
-\includegraphics[scale=0.5]{poster_images/Figure3}
-\end{figure}
-\end{block}
-
-\end{column}
-\begin{column}{.48\linewidth}
-
-\begin{block}{Results}
-\begin{itemize}
-\item Extracted the peak resonance frequency.
-\begin{figure}
-\center
-\includegraphics[scale=0.55]{poster_images/Contour_plot_tuning_frequency}
-\end{figure}
-\item Extracted the resonance strength of the tuning Q, measured as:
+\item Constructed frequency tuning curves and then extracted the peak resonance frequency (fig 3).
+\item Extracted the resonance strength of the tuning Q (fig 3), measured as:
 \[
 \text{Q =} \frac{\text{(F}_{\text{max}} \text{ - F}_{\text{min}}\text{)}}{<\text{F}>}
 \]
 \item \mbox{$\text{F}_{\text{max}}$} and \mbox{$\text{F}_{\text{min}}$} is maximum and minimum firing rate.
 \item $<$F$>$ is mean firing rate over all measured frequencies.
 \end{itemize}
+\end{block}
+
+\end{column}
+\begin{column}{.48\linewidth}
+
+\begin{block}{Results}
+\begin{figure}
+\center
+\includegraphics[scale=0.55]{poster_images/Contour_plot_tuning_frequency}
+\end{figure}
+
+\begin{itemize}
+\item Resonance frequency decreased as the excitation of the PGC increased (both from input and the MC).
+\item Strength of PGC inhibition onto the MC did not have a strong effect.
+
 \begin{figure}
 \center
 \includegraphics[scale=0.55]{poster_images/Contour_plot_tuning_strength}
 \end{figure} 
+
+\item Resonance strength increased with the strength of the excitatory connection, when the PGC received sufficient external input.
+\end{itemize}
 \end{block}
 
 \begin{block}{Discussion}
 \begin{itemize}
-\item Resonance frequency decreased as the excitation of the PGC increased (both from input and the MC).
-\item Strength of PGC inhibition onto the MC did not have a strong effect.
-\item Resonance strength increased with the strength of the excitatory connection, when the PGC received sufficient external input.
 \item Results suggest the MC can show frequency tuning.
-\item This depends on the strength of the excitatory synaptic input to the PGC, which provides inhibitory input to the MC.
+\item This depends on the strength of the excitatory synaptic input to the PGC, which provides inhibitory input to the MC. \cite{celani2014odor}
 \end{itemize}
+\end{block}
+
+\begin{block}{References}
+\nocite{*}
+\bibliographystyle{acm}
+{\footnotesize
+\bibliography{BibList}}
 \end{block}
 
 \end{column}
