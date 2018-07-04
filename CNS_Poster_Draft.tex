@@ -15,7 +15,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 5
 \title{Influence of inhibitory circuits on the frequency tuning of mitral cells}
 \author[Miko]{Rebecca Miko, Christoph Metzner and Volker Steuber}
-\institute{University of Hertfordshire, AL10 9AB, UK}
+\institute{Biocomputation Research Group, Centre for Computer Science and Informatics Research, University of Hertfordshire, UK}
 \date{Jul. 31th, 2018}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 5
@@ -42,26 +42,22 @@
 \end{block}
 
 \begin{block}{Method} 
-\begin{figure}
-\center
-\includegraphics[scale=0.8]{poster_images/Figure2}
-\end{figure}
 \begin{itemize}
+\item Parameter combinations: PGC input strength, MC - PGC excitation strength and PGC - MC inhibition strength.
 \item We used sinusoidal currents of varying frequencies as input, using the equation:
 \[
 \text{y(t) = c\cdot sin(2} \cdot\pi\cdot\text{ft +} \varphi\text{) + 0.18}
 \]
 \item Where strength of input to MC (c) = 0.45nA and phase ($\varphi$) = 0.
+\item PGC input is defined as i\cdot c, where i is the PGC input factor.
 \end{itemize}
 
 \begin{center}
 \begin{tabular}{ |c| c c c c c | }
 \hline 
-\multirow{2}{12em}{\centering Parameter} & \multicolumn{5}{c|}{\multirow{2}{*}{\centering Iteration Values}}\\
-\multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{}\\
+Parameter & \multicolumn{5}{c|}{Iteration Values}\\
 \hline
-\multirow{2}{12em}{\centering PGC Input Strength (i\cdot c)} & \multirow{2}{*}{0.2} & \multirow{2}{*}{0.3} & \multirow{2}{*}{0.4} & \multirow{2}{*}{0.5} & \multirow{2}{*}{0.6} \\ 
-\multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{}\\
+PGC Input Factor (i) & 0.2 & 0.3 & 0.4 & 0.5 & 0.6 \\ 
 \hline
 \multirow{2}{12em}{\centering MC - PGC excitation strength (\mbox{$\text{W}_{\text{exc}}$})} & \multirow{2}{*}{2.0} & \multirow{2}{*}{4.0} & \multirow{2}{*}{6.0} & \multirow{2}{*}{8.0} & \multirow{2}{*}{10.0}  \\
 \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{}\\
@@ -69,20 +65,24 @@
 \multirow{2}{12em}{\centering PGC - MC inhibition strength (\mbox{$\text{W}_{\text{inh}}$})} & \multirow{2}{*}{1.0} & \multirow{2}{*}{2.0} & \multirow{2}{*}{3.0} & \multirow{2}{*}{4.0} & \multirow{2}{*}{5.0} \\
 \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{}\\
 \hline
-\multirow{2}{12em}{\centering Frequency (f)} & \multirow{2}{*}{1.0,} & \multirow{2}{*}{2.0,} & \multirow{2}{*}{3.0,} & \multirow{2}{*}{... ,} & \multirow{2}{*}{40.0}\\
-\multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{}\\
+Frequency (f) & 1.0, & 2.0, & 3.0, & ... , & 40.0\\
 \hline
 \end{tabular}
 \end{center}
 
 \begin{itemize}
-\item Parameter combinations: PGC input strength, MC - PGC excitation strength and PGC - MC inhibition strength.
-\item Constructed frequency tuning curves and then extracted the peak resonance frequency (fig 3).
+\item Constructed frequency tuning curves (fig2) and then extracted the peak resonance frequency (fig 3).
+
+\begin{figure}
+\center
+\includegraphics[scale=0.48]{poster_images/Figure3}
+\end{figure}
+
 \item Extracted the resonance strength of the tuning Q (fig 4), measured as:
 \[
 \text{Q =} \frac{\text{(F}_{\text{max}} \text{ - F}_{\text{min}}\text{)}}{<\text{F}>}
 \]
-\item \mbox{$\text{F}_{\text{max}}$} and \mbox{$\text{F}_{\text{min}}$} is maximum and minimum firing rate.
+\item \mbox{$\text{F}_{\text{max}}$} and \mbox{$\text{F}_{\text{min}}$} are maximum and minimum firing rate.
 \item $<$F$>$ is mean firing rate over all measured frequencies.
 \end{itemize}
 \end{block}
@@ -115,7 +115,7 @@ We thank Michael Schmuker for comments and support.
 
 \begin{block}{Conclusion}
 \begin{itemize}
-\item Results suggest the MC can show frequency tuning on the strength of the excitatory synaptic input to the PGCs, which provides inhibitory input to the MCs.
+\item Our results suggest that MCs can show frequency tuning in the presence of sufficiently strong excitatory connections between MCs and PGCs, which provide feedback inhibition to the MCs.
 \item Therefore, the OB might be able to detect the frequency composition of signals.
 \item This could be used for olfactory scene analysis.
 \item However, we only see tuning in a narrow frequency range.
@@ -127,7 +127,7 @@ We thank Michael Schmuker for comments and support.
 
 \begin{block}{References}
 \nocite{*}
-\bibliographystyle{abbrv}
+\bibliographystyle{ieeetr}
 {\footnotesize
 \bibliography{BibList}}
 \end{block}
