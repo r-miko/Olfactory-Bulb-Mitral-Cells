@@ -12,3 +12,6 @@
 *.snm
 *.toc
 *.sty
+
+*.tex
+*.bib
