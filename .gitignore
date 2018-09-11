@@ -5,6 +5,10 @@
 #Predictions
 /Model/Predictions
 
+#Poster folders
+/Bernstein_Poster/
+/CNS_Poster/
+
 #Latex files
 *.sty
 *.sh
