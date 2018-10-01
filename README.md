@@ -5,7 +5,7 @@ This project was presented at the 2018 CNS (Computational Neuroscience) conferen
 
 https://www.cnsorg.org/publications 
 
-It was also presented at the 2018 Bernstein Conference in Berlin, Germany.
+It was also presented at the 2018 Bernstein conference in Berlin, Germany.
 
 http://www.bernstein-conference.de/ 
 
