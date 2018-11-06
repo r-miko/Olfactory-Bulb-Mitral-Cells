@@ -3,7 +3,7 @@
 
 This project was presented at the 2018 CNS (Computational Neuroscience) conference in Seattle, Washington, US.
 
-https://www.cnsorg.org/publications 
+https://bmcneurosci.biomedcentral.com/articles/10.1186/s12868-018-0451-y#Sec253 
 
 It was also presented at the 2018 Bernstein conference in Berlin, Germany.
 
