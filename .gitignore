@@ -20,3 +20,9 @@
 *.tex
 *.bib
 
+#Unnecessary Files
+*.pyc
+/Model/Frequency-Tuned-MCs/Tuning_Results/Contour_plot_tuning_strength.png
+/Model/Frequency-Tuned-MCs/Tuning_Results/Contour_plot_tuning_frequency.png
+/Model/testMC-PGC.py
+
