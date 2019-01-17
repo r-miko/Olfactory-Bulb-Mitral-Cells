@@ -7,7 +7,7 @@ https://bmcneurosci.biomedcentral.com/articles/10.1186/s12868-018-0451-y#Sec253
 
 It was also presented at the 2018 Bernstein conference in Berlin, Germany.
 
-http://www.bernstein-conference.de/ 
+https://abstracts.g-node.org/conference/BC18/abstracts#/uuid/18bd9263-05a8-457d-9f93-9c41059989b8
 
 
 We used a model of the olfactory bulb which was modified from 
